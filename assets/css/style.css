@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button { cursor: pointer; }
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+/* Common styling */
+.grey { color: #666; }
+.cap { text-transform: capitalize; }
+.up { text-transform: uppercase; }
+.center { text-align: center; }
+.bold { font-weight: bold; }
+.transition { transition: 1s all ease; }
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1288px;
+  width: 90%; 
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+.scoreboard-area {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+}
+
+.score { padding: 20px 0px; }
+
+.scoreboard-area span {
+  display: block;
+  color: #E62649;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.play-area {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.play-area div { 
+  flex: 1; 
+  text-align: center;
+}
+
+.user-play-area, .computer-play-area {
+  border: 1px solid #E62649;
+  padding: 15px 20px;
+}
+
+.play-result-area span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 23px;
+  text-align: center;
+  display: block;
+  margin: 30px 0px;
+}
+
+.recent-play {
+  color: #E62649;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.play-area img {
+  width: 50%;
+  border-radius: 50%;
+  background: linear-gradient(225deg, #e6e6e6, #ffffff);
+  box-shadow:  -6px 6px 12px #bababa, 
+               6px -6px 12px #ffffff;
+}
+
+.play-area img:hover {
+  box-shadow:  -10px 6px 12px #bababa, 
+             6px -10px 12px #ffffff;
+}
+
+.play-area figure { 
+  border-radius: 2px; 
+  padding: 10px 0px;
+  border : 2px solid #E62649;
+}
+
+.user-choices {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding: 20px 0px;
+  border: 1px solid #ccc;
+}
+
+.choices {
+  background: #E62649;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.choices a {
+  border-radius: 50%;
+  background: #E62649;
+  box-shadow:  -5px 5px 10px #83162a, 
+             5px -5px 10px #ff3668;
+  color: #fff;
+  font-size: 25px;
+}
+
+.choices a:hover {
+  box-shadow:  -10px 5px 10px #83162a, 
+             5px -10px 10px #ff3668;
+}
+
+.choices i { padding: 25px; }
+
+.choices span {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.recent-play li {   
+  display: block; 
+  padding: 15px 0px;
+}
+
+.recent-play {
+  max-height: 240px;
+  overflow-y: scroll;
+  padding: 0px 15px;
+}
+
+.recent-play li {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+}
+
+.looser { 
+  color: #333; 
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+     -o-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+.play-area span {
+  color: #333;
+  font-size: 25px;
+  display: block;
+  margin: 15px 0px;
+}
+
+.looser-area { 
+  border-color: #333 !important; 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+       -o-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
