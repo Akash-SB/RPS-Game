@@ -148,6 +148,7 @@ body {
 .user-play-area, .computer-play-area {
   border: 1px solid #E62649;
   padding: 15px 20px;
+  position: relative;
 }
 
 .play-result-area span {
@@ -182,7 +183,7 @@ body {
 .play-area figure { 
   border-radius: 2px; 
   padding: 10px 0px;
-  border : 2px solid #E62649;
+  border : 3px double #E62649;
 }
 
 .user-choices {
@@ -241,11 +242,7 @@ body {
 
 .looser { 
   color: #333; 
-  -webkit-transition: all 1s ease;
-   -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-     -o-transition: all 1s ease;
-        transition: all 1s ease;
+  transition: all 3s ease;
 }
 
 .play-area span {
@@ -257,13 +254,16 @@ body {
 
 .looser-area { 
   border-color: #333 !important; 
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-       -o-transition: all 1s ease;
-          transition: all 1s ease;
+  transition: all 3s ease;
 }
 
+
+.user-result, .computer-result {
+  position: absolute;
+  top: -30px;
+  background: #fff;
+  color: #E62649 !important;
+}
 /*=================================
   Header styling ends here
 =================================*/  
